@@ -9,6 +9,7 @@ import { GithubService } from '../github.service';
   styleUrls: ['./personal-info.component.scss']
 })
 export class PersonalInfoComponent implements OnInit {
+
   user$: Observable<User> | undefined;
   constructor(private githubService: GithubService) { }
   
@@ -16,4 +17,5 @@ export class PersonalInfoComponent implements OnInit {
   this.user$ = this.githubService.getUser();
   
   }
+
 }
